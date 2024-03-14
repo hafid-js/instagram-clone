@@ -1,9 +1,12 @@
+import { useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import HomeRight from '../../Components/HomeRight/HomeRight'
+import CreatePostModal from '../../Components/Post/CreatePostModal'
 import PostCard from '../../Components/Post/PostCard'
 import StoryCircle from '../../Components/Story/StoryCircle'
 
 const HomePage = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>
       <div className='mt-10 flex w-[100%] justify-center'>
@@ -19,6 +22,7 @@ const HomePage = () => {
           <HomeRight/>
         </div>
       </div>
+      <CreatePostModal onClose={onClose} isOpen={isOpen}/>
       </div>
   )
 }

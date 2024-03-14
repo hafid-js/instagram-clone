@@ -1,4 +1,6 @@
 import {
+  AiFillCompass,
+  AiFillHeart,
   AiFillHome,
   AiFillMessage,
   AiFillPlusCircle,
@@ -10,7 +12,9 @@ import {
   AiOutlineSearch,
 } from "react-icons/ai";
 import {CgProfile} from "react-icons/cg"
-import{RiVideoFill, RiVideoLine} from "react-icons/ri"
+import { FaSearch, FaUserCircle } from "react-icons/fa";
+import { IoSearchSharp } from "react-icons/io5";
+import{RiVideoFill, RiVideoLine } from "react-icons/ri"
 
 export const mainu = [
   {
@@ -21,12 +25,12 @@ export const mainu = [
   {
     title: "Search",
     icon: <AiOutlineSearch></AiOutlineSearch>,
-    activeIcon: <AiOutlineSearch></AiOutlineSearch>,
+    activeIcon: <FaSearch></FaSearch>,
   },
   {
     title: "Explore",
     icon: <AiOutlineCompass></AiOutlineCompass>,
-    activeIcon: <AiOutlineCompass></AiOutlineCompass>,
+    activeIcon: <AiFillCompass></AiFillCompass>,
   },
   {
     title: "Reels",
@@ -41,7 +45,7 @@ export const mainu = [
   {
     title:"Notification",
     icon:<AiOutlineHeart></AiOutlineHeart>,
-    activeIcon:<AiOutlineHeart></AiOutlineHeart>
+    activeIcon:<AiFillHeart></AiFillHeart>
   },
   {
     title:"Create",
@@ -51,6 +55,6 @@ export const mainu = [
   {
     title:"Profile",
     icon:<CgProfile></CgProfile>,
-    activeIcon:<CgProfile></CgProfile>
+    activeIcon: <FaUserCircle></FaUserCircle>
   }
 ];
