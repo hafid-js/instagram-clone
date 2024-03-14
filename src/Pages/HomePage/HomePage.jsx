@@ -6,7 +6,7 @@ import PostCard from '../../Components/Post/PostCard'
 import StoryCircle from '../../Components/Story/StoryCircle'
 
 const HomePage = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onClose } = useDisclosure();
   return (
     <div>
       <div className='mt-10 flex w-[100%] justify-center'>
@@ -18,7 +18,7 @@ const HomePage = () => {
             {[1,1].map((item) => <PostCard/>)}
           </div>
         </div>
-        <div className='w-[35%]'>
+        <div className='w-[27%]'>
           <HomeRight/>
         </div>
       </div>

@@ -13,7 +13,6 @@ import {
 } from "react-icons/ai";
 import {CgProfile} from "react-icons/cg"
 import { FaSearch, FaUserCircle } from "react-icons/fa";
-import { IoSearchSharp } from "react-icons/io5";
 import{RiVideoFill, RiVideoLine } from "react-icons/ri"
 
 export const mainu = [

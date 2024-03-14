@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./Progressbar.css"
 
-const Progressbar = (index, activeIndex, duration) => {
-    const [progress, setProgress] = useState();
+const Progressbar = ({index, activeIndex, duration}) => {
+    const [progress, setProgress] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -11,21 +11,24 @@ const Progressbar = (index, activeIndex, duration) => {
                     return prevProgress+1;
                 }
                 clearInterval(interval)
-                return prevProgress
+                return prevProgress;
             })
-        }, duration/100)
+        }, duration / 100)
         return () => {
             clearInterval(interval)
         }
     }, [duration, activeIndex]);
 
-    const isActive = index === activeIndex;
-  return (
-    <div>
-        <div>
-            <div className={`${isActive?"progress-bar":""}`} style={{ width: `${progress}%` }}>
+    useEffect(() => {
+        setProgress(0);
+    }, [activeIndex])
 
-            </div>
+    const isActive = index === activeIndex;
+
+
+  return (
+    <div className={`progress-bar-container ${isActive? "active":""}`}>
+            <div className={`${isActive ? "progress-bar" : ""}`} style={{ width: `${progress}%` }}>
         </div>
     </div>
   )
